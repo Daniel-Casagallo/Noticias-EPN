@@ -1,17 +1,45 @@
-<ion-header [translucent]="true">
+<ion-header no-border>
   <ion-toolbar>
+
+    <ion-buttons slot="start">
+      <ion-button
+                  color="primary"
+                  href="/menu">
+        Regresar
+      </ion-button>
+    </ion-buttons>
+
+    <!-- [disabled]="publicacion.descripcion.length < 1" -->
+ 
+
     <ion-title>
-      Tab 2
+      Nueva Publicación
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content padding>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+ 
+  <ion-row>
+    <ion-col size="6">
+      <ion-button expand="full"
+                  shape="round"
+                  (click) = "camara()">                  
+        <ion-icon slot="start" name="camera"></ion-icon>
+        Cámara
+      </ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button expand="full"
+                  shape="round"
+                  (click)="libreria()">
+        <ion-icon slot="start" name="images"></ion-icon>
+        Galería
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+ 
+
 </ion-content>
